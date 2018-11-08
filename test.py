@@ -6,7 +6,7 @@ pygame.init()
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 brown = (209, 183, 142)
-green = (111, 207, 232)
+green = (163, 135, 207)
 
 # Screen dimensions
 SCREEN_WIDTH = 800
@@ -32,7 +32,7 @@ class Player(pygame.sprite.Sprite):
 
         # Call the parent's constructor
         super().__init__()
-        self.image = pygame.image.load("Sanrec1.png")
+        self.image = pygame.image.load("Sanrec-run-right2.png")
 
         # Set image rect.
         self.rect = self.image.get_rect()
@@ -46,15 +46,7 @@ class Player(pygame.sprite.Sprite):
         self.frame = 0
         self.health = 10
 
-    def go_left(self):
-        self.direction = -1
-        self.movex = -8
-        self.image = pygame.image.load("Sanrec-run-lft.png")
 
-    def go_right(self):
-        self.direction = 1
-        self.movex = 8
-        self.image = pygame.image.load("Sanrec-run-right2.png")
 
     def update(self):
 
@@ -267,7 +259,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load('2lgmlw1ukhk01.gif')
-        self.image = pygame.transform.scale(self.image,(100,100))
+        self.image = pygame.transform.scale(self.image, (100, 100))
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
