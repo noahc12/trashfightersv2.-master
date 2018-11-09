@@ -200,11 +200,21 @@ class Level_01(Level):
         self.level_limit = -1000
 
         # Array with width, height, x, and y of platform
-        level = [[210, 70, 500, 500],
+        level = level = [[100, 1000, 30, 80],
+                 [210, 70, 500, 500],
                  [210, 70, 800, 400],
                  [210, 70, 1000, 500],
                  [210, 70, 1120, 280],
-                 [210, 70, 2000, 300],
+                 [210, 70, 500, 800],
+                 [210, 70, 150, 230],
+                 [210, 70, 300, 360],
+                 [210, 70, 900, 500],
+                 [210, 70, 1500, 500],
+                 [210, 70, 1800, 500],
+                 [210, 70, 1200, 500],
+                 [210, 70, 1600, 500],
+
+
                  ]
 
         # Go through the array above and add platforms
@@ -239,10 +249,14 @@ class Level_02(Level):
 
         # Array with type of platform, and x, y location of the platform.
         level = [[210, 30, 450, 570],
-                 [210, 30, 850, 420],
-                 [210, 30, 1000, 520],
-                 [210, 30, 1120, 280],
-                 ]
+         [210, 30, 250, 570],
+         [210, 30, 400, 300],
+         [210, 30, 1000, 520],
+         [210, 30, 1120, 280],
+         [100, 1000, 1900, 80]
+
+
+        ]
 
         # Go through the array above and add platforms
         for platform in level:
@@ -296,7 +310,7 @@ class projectile(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((10, 10))
-        self.image.fill((212, 119, 255))
+        self.image.fill((114, 240, 104  ))
         self.rect = self.image.get_rect()
 
     #Bullet dies off screen
